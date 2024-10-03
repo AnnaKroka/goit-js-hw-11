@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework-11</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./main.js" defer></script>
   </head>
   <body>
-    
+   <section class="gallery-section">
+    <div class="container">
+    <form class="search-form js-search-form">
+        <input class="search-input js-search-input" type="text" name="user_search" placeholder="Search images..."  />
       
-    <script type="module" src="./main.js"></script>
+      <button class="search-btn" type="submit">Search</button>
+    </form>
+    <ul class="gallery js-gallery"></ul>
+    <span class="loader js-loader is-hidden"></span>
+    </div>
+   </section>
+       
   </body>
 </html>
