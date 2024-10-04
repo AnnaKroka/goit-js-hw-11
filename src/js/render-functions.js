@@ -1,38 +1,40 @@
 import iziToast from 'izitoast';
 
 export const createGalleryCard = (imgInfo) => {
-
     return `
     <li class="gallery-card">
-      	<a class="gallery-link" href="${imgInfo.largeImageURL} download=false">
-		<img 
-			class="gallery-img" 
-			src="${imgInfo.webformatURL}" 
-			alt="${imgInfo.tags}" 
-            width=360  
-            onclick="return false"
+        <a
+          class="gallery-link"
+          href="${imgInfo.largeImageURL}"
+        >
+          <img
+            class="gallery-img"
+            src="${imgInfo.webformatURL}"
+            alt="${imgInfo.tags}"
+            width=360
+  //        onclick="return false"
             data-source="${imgInfo.largeImageURL}"
-			/>
-        <ul class="description">
+          />
+          <ul class="description">
             <li>
-             <p>Likes</p>
-             <p class="description-value">${imgInfo.likes}</p>
+              <p>Likes</p>
+              <p class="description-value">${imgInfo.likes}</p>
             </li>
             <li>
-             <p>Views</p>
-             <p class="description-value">${imgInfo.views}</p>
+              <p>Views</p>
+              <p class="description-value">${imgInfo.views}</p>
             </li>
             <li>
-             <p>Comments</p>
-             <p class="description-value">${imgInfo.comments}</p>
+              <p>Comments</p>
+              <p class="description-value">${imgInfo.comments}</p>
             </li>
             <li>
-             <p>Downloads</p>
-             <p class="description-value">${imgInfo.downloads}</p>
+              <p>Downloads</p>
+              <p class="description-value">${imgInfo.downloads}</p>
             </li>
-        </ul>
-	</a>
-  </li>
+          </ul>
+        </a>
+      </li>
     `;
 };
 
@@ -51,3 +53,4 @@ export function showMessage(message) {
     const loader = document.querySelector('.js-loader');
     loader.classList.add('is-hidden');
   }
+
